@@ -15,7 +15,7 @@ const App = defineComponent({
 
   template: `<div>
     Сегодня {{ date }}
-  </div>`
+  </div>`,
 })
 
 const app = createApp(App)

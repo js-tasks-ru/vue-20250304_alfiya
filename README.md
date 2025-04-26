@@ -52,9 +52,9 @@ npm run typecheck
 
 ## Проверка качества и форматирование кода
 
-В задачнике настроена связка [ESLint](https://eslint.org) + [Prettier](https://prettier.io). 
+В задачнике настроена связка [ESLint](https://eslint.org) + [Prettier](https://prettier.io).
 
-Вы можете изменить конфигурацию линтера и форматера на ваше усмотрение в файлах `eslint.config.js` и `prettier.config.js`. 
+Вы можете изменить конфигурацию линтера и форматера на ваше усмотрение в файлах `eslint.config.js` и `prettier.config.js`.
 
 ## Доступные библиотеки
 

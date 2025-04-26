@@ -4,22 +4,19 @@ export default defineComponent({
   name: 'UiClock',
 
   setup() {
-    const currentTime = ref();
-    let intervalId;
+    const currentTime = ref()
+    let intervalId
 
-    const timeFormatter = new Intl.DateTimeFormat(
-      navigator.language,
-      {
-        timeStyle: "medium"
-      }
-    )
+    const timeFormatter = new Intl.DateTimeFormat(navigator.language, {
+      timeStyle: 'medium',
+    })
 
     const setCurrentTime = () => {
-      currentTime.value = timeFormatter.format(new Date());
+      currentTime.value = timeFormatter.format(new Date())
     }
 
     onMounted(() => {
-      setCurrentTime();
+      setCurrentTime()
       intervalId = setInterval(setCurrentTime, 1000)
     })
 
@@ -28,7 +25,7 @@ export default defineComponent({
     })
 
     return {
-      currentTime
+      currentTime,
     }
   },
 

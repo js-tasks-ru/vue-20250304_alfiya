@@ -5,18 +5,22 @@ export default defineComponent({
   name: 'SelectedMeetupApp',
 
   setup() {
-    const meetup = ref(null);
-    const selectedMeetupId = ref(1);
+    const meetup = ref(null)
+    const selectedMeetupId = ref(1)
 
-    watch(selectedMeetupId, async () => {
-      meetup.value = await getMeetup(selectedMeetupId.value)
-    }, { immediate: true })
+    watch(
+      selectedMeetupId,
+      async () => {
+        meetup.value = await getMeetup(selectedMeetupId.value)
+      },
+      { immediate: true },
+    )
 
-    const paginateMeetup = (mode) => {
-      if(mode === 'forward') {
+    const paginateMeetup = mode => {
+      if (mode === 'forward') {
         selectedMeetupId.value++
       }
-      if(mode === 'back') {
+      if (mode === 'back') {
         selectedMeetupId.value--
       }
     }
@@ -24,7 +28,7 @@ export default defineComponent({
     return {
       meetup,
       selectedMeetupId,
-      paginateMeetup
+      paginateMeetup,
     }
   },
 

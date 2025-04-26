@@ -20,7 +20,7 @@ export default defineComponent({
     return {
       handleClick,
       x,
-      y
+      y,
     }
   },
 

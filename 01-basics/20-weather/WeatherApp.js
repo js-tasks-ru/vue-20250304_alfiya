@@ -10,21 +10,20 @@ export default defineComponent({
     }
 
     function transformPatoMmHg(pa) {
-      return Math.round(pa*0.75)
+      return Math.round(pa * 0.75)
     }
 
     function getMilliSecondDate(string) {
-      const date = new Date();
-      date.setHours(
-        string.slice(0,2),
-        string.slice(-2)
-      )
-      return date;
+      const date = new Date()
+      date.setHours(string.slice(0, 2), string.slice(-2))
+      return date
     }
 
     function isNight(sunrise, sunset, currentTime) {
-      return getMilliSecondDate(currentTime) < getMilliSecondDate(sunrise) ||
+      return (
+        getMilliSecondDate(currentTime) < getMilliSecondDate(sunrise) ||
         getMilliSecondDate(sunset) < getMilliSecondDate(currentTime)
+      )
     }
 
     return {
@@ -32,7 +31,7 @@ export default defineComponent({
       icons: WeatherConditionIcons,
       transformKelvinToCelsius,
       transformPatoMmHg,
-      isNight
+      isNight,
     }
   },
 
