@@ -1,12 +1,12 @@
 import { defineComponent, ref } from 'vue'
 
-const MAX_COUNT = 5;
+const MAX_COUNT = 5
 
 export default defineComponent({
   name: 'CounterApp',
 
   setup() {
-    const count = ref(0);
+    const count = ref(0)
 
     const increment = () => {
       count.value++
@@ -20,7 +20,7 @@ export default defineComponent({
       count,
       MAX_COUNT,
       increment,
-      decrement
+      decrement,
     }
   },
 

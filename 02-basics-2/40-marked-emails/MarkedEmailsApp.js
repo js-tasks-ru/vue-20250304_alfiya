@@ -33,18 +33,18 @@ export default defineComponent({
   name: 'MarkedEmailsApp',
 
   setup() {
-    const searchQuery = ref('');
+    const searchQuery = ref('')
 
     const filteredEmails = computed(() => {
-      return emails.map((item) => ({
+      return emails.map(item => ({
         content: item,
-        marked: item.includes(searchQuery.value ? searchQuery.value : false)
+        marked: item.includes(searchQuery.value ? searchQuery.value : false),
       }))
     })
 
     return {
       filteredEmails,
-      searchQuery
+      searchQuery,
     }
   },
 

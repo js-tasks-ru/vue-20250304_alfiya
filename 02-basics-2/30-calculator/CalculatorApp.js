@@ -4,9 +4,9 @@ export default defineComponent({
   name: 'CalculatorApp',
 
   setup() {
-    const a = ref(0);
-    const b = ref(0);
-    const operator = ref("sum")
+    const a = ref(0)
+    const b = ref(0)
+    const operator = ref('sum')
 
     function calculate() {
       switch (operator.value) {
@@ -24,12 +24,12 @@ export default defineComponent({
     const result = computed(() => {
       return calculate()
     })
-    
+
     return {
       a,
       b,
       operator,
-      result
+      result,
     }
   },
 
