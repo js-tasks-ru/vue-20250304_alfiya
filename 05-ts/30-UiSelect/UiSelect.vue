@@ -11,7 +11,7 @@ const modelValue = defineModel<T>({ required: true })
 
 <template>
   <select v-model="modelValue" class="select">
-    <option v-for="(option) in options" :key="option.value" :value="option.value">
+    <option v-for="option in options" :key="option.value" :value="option.value">
       {{ option.text}}
     </option>
   </select>
