@@ -1,4 +1,9 @@
-<script setup lang="ts" generic="T extends string">
+<script lang="ts">
+import type { SelectValue } from './types.js'
+</script>
+
+// а так можно?
+<script setup lang="ts" generic="T extends SelectValue">
 defineProps<{
   options: {
     text: string,
