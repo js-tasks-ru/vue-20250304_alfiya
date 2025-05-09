@@ -3,16 +3,17 @@ import { ref } from 'vue'
 import { UiContainer } from '@shgk/vue-course-ui'
 import UiSelect from './UiSelect.vue'
 
-type SelectValue = '' | '1' | '2' | '3'
+// type SelectValue = '' | '1' | '2' | '3'
+import { SelectValue } from './types.ts'
 
 const options = [
-  { value: '', text: 'Выберите значение…' } as const,
-  { value: '1', text: 'Один' } as const,
-  { value: '2', text: 'Два' } as const,
-  { value: '3', text: 'Три' } as const,
+  { value: SelectValue.Empty, text: 'Выберите значение…' } ,
+  { value: SelectValue.One, text: 'Один' },
+  { value: SelectValue.Two, text: 'Два' },
+  { value: SelectValue.Three, text: 'Три' },
 ]
 
-const selected = ref<SelectValue>('')
+const selected = ref<SelectValue>(SelectValue.Empty)
 
 function handleUpdate(newValue: SelectValue) {
   console.info(newValue)
